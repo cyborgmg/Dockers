@@ -1,0 +1,6 @@
+.debris/
+ada-api/adaApi-0.0.1.jar
+ada-front/ada.tar.gz
+oracle-xe/u01/
+postgres/data/
+rabbitmq-server/rabbitmq-data/

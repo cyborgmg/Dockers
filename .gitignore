@@ -4,3 +4,4 @@ ada-front/ada.tar.gz
 oracle-xe/u01/
 postgres/data/
 rabbitmq-server/rabbitmq-data/
+mongodb/mongodb/

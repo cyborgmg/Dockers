@@ -5,3 +5,4 @@ oracle-xe/u01/
 postgres/data/
 rabbitmq-server/rabbitmq-data/
 mongodb/mongodb/
+kafka/data/

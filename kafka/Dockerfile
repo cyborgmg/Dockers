@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get -qq update && apt-get install -y curl unzip openjdk-11-jdk
+RUN apt-get -qq update && apt-get install -y curl unzip megatools openjdk-11-jdk
 
 WORKDIR /opt
 
@@ -20,15 +20,15 @@ COPY server.properties /opt/kafka/config/server.properties
 
 COPY zookeeper.properties /opt/kafka/config/zookeeper.properties
 
-COPY cmak-3.0.0.5.zip /opt/cmak-3.0.0.5.zip
+#COPY cmak-3.0.0.5.zip /opt/cmak-3.0.0.5.zip
 
-RUN unzip cmak-3.0.0.5.zip && rm -rf cmak-3.0.0.5.zip
-
-#RUN wget -qO- https://github.com/cyborgmg/Dockers/raw/main/kafka/cmak-3.0.0.5.zip | busybox unzip -
+RUN megadl 'https://mega.nz/#!h5YhxaoI!SrdtUdy40rIPrcR44Bkv-cbHEwfdAwgtM4xe7gARyz8' && \
+	unzip cmak-3.0.0.5.zip && \
+	rm -rf cmak-3.0.0.5.zip
 
 COPY application.conf /opt/cmak-3.0.0.5/conf/application.conf
 
-RUN apt remove -y unzip && apt autoremove -y
+RUN apt remove -y unzip megatools && apt autoremove -y
 
 EXPOSE 38527
 

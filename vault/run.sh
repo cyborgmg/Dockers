@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run --cap-add=IPC_LOCK -e 'VAULT_DEV_ROOT_TOKEN_ID=root' -e 'VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:1234' -p1234:1234 vault
+docker run -d --hostname vault --name vault -e VAULT_DEV_ROOT_TOKEN_ID="00000000-0000-0000-0000-000000000000" -e VAULT_DEV_LISTEN_ADDRESS="0.0.0.0:8200" -e VAULT_ADDR="http://127.0.0.1:8200" -p 8200:8200 cyborgmg/vault:latest

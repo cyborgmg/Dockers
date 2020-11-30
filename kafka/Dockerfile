@@ -20,8 +20,6 @@ COPY server.properties /opt/kafka/config/server.properties
 
 COPY zookeeper.properties /opt/kafka/config/zookeeper.properties
 
-#COPY cmak-3.0.0.5.zip /opt/cmak-3.0.0.5.zip
-
 RUN megadl 'https://mega.nz/#!h5YhxaoI!SrdtUdy40rIPrcR44Bkv-cbHEwfdAwgtM4xe7gARyz8' && \
 	unzip cmak-3.0.0.5.zip && \
 	rm -rf cmak-3.0.0.5.zip

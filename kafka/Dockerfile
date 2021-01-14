@@ -10,6 +10,8 @@ RUN curl -L https://downloads.apache.org/kafka/2.6.0/kafka_2.13-2.6.0.tgz | tar 
 
 RUN mv /opt/kafka_2.13-2.6.0 /opt/kafka
 
+ENV PATH=/opt/kafka/bin/:$PATH
+
 RUN mkdir -p /opt/kafka/data/zookeeper
 
 RUN mkdir -p /opt/kafka/data/kafka
@@ -37,6 +39,8 @@ EXPOSE 2181
 EXPOSE 46681
 
 EXPOSE 9000
+
+WORKDIR /root/
 
 COPY cmd.sh /opt/cmd.sh
 

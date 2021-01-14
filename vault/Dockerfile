@@ -12,8 +12,6 @@ ENV VAULT_ADDR="http://127.0.0.1:8200"
 
 WORKDIR /usr/bin
 
-#COPY vault /usr/bin/vault
-
 RUN  wget -qO- https://releases.hashicorp.com/vault/1.6.0/vault_1.6.0_linux_amd64.zip | busybox unzip -
 
 RUN chmod 777 /usr/bin/vault

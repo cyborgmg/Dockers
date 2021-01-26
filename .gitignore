@@ -9,3 +9,8 @@ kafka/data/
 kafka/cmak-3.0.0.5.zip
 mariadb/mysql/
 mysql/mysql/
+jenkins/jenkins_home/
+sonar/postgresql/
+sonar/sonarqube/
+tomcat/conf/
+tomcat/webapps/

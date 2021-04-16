@@ -14,3 +14,4 @@ sonar/postgresql/
 sonar/sonarqube/
 tomcat/conf/
 tomcat/webapps/
+kafka-ssl/data/

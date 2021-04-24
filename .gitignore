@@ -16,3 +16,4 @@ tomcat/conf/
 tomcat/webapps/
 kafka-ssl/data/
 kafka-ssl/cmak-3.0.0.5.zip
+ponto/

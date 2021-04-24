@@ -24,7 +24,7 @@ keytool -keystore client.keystore.jks -alias CARoot -import -file root.crt
 keytool -keystore client.keystore.jks -alias localhost -import -file client.signed.cert
 
 # Com o kafka startado altere seu /etc/hosts para isso
-127.0.0.1	localhos, kafka-ssl
+127.0.0.1	localhost, kafka-ssl
 
 # Teste de mensageria
 
